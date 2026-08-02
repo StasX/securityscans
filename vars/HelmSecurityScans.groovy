@@ -19,9 +19,9 @@ def checkovScan(
             '''
         } finally {
             archiveArtifacts(
-                artifacts: 'checkov-report.txt',
-                allowEmptyArchive: true,
-                fingerprint: true
+                artifacts:'checkov-report.txt',
+                allowEmptyArchive:true,
+                fingerprint:true
             )
         }
     }
@@ -48,9 +48,9 @@ def kubeScoreScan(
             '''
         } finally {
             archiveArtifacts(
-                artifacts: 'kube-score-report.txt',
-                allowEmptyArchive: true,
-                fingerprint: true
+                artifacts:'kube-score-report.txt',
+                allowEmptyArchive:true,
+                fingerprint:true
             )
         }
     }
@@ -70,9 +70,9 @@ def semgrepScan() {
         '''
     } finally {
         archiveArtifacts(
-            artifacts: 'semgrep-report.txt',
-            allowEmptyArchive: true,
-            fingerprint: true
+            artifacts:'semgrep-report.txt',
+            allowEmptyArchive:true,
+            fingerprint:true
         )
     }
 }

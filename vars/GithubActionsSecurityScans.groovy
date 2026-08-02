@@ -9,9 +9,9 @@ def semgrepScan() {
         '''
     } finally {
         archiveArtifacts(
-            artifacts: 'semgrep.txt',
-            fingerprint: true,
-            allowEmptyArchive: true
+            artifacts:'semgrep.txt',
+            fingerprint:true,
+            allowEmptyArchive:true
         )
     }
 }

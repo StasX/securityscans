@@ -15,9 +15,9 @@ def semgrepScan(String venv = '.venv') {
             '''
         } finally {
             archiveArtifacts(
-                artifacts: 'semgrep-report.txt',
-                allowEmptyArchive: true,
-                fingerprint: true
+                artifacts:'semgrep-report.txt',
+                allowEmptyArchive:true,
+                fingerprint:true
             )
         }
     }

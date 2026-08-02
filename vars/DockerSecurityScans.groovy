@@ -19,9 +19,9 @@ def trivyScanImage(
             '''
         } finally {
             archiveArtifacts(
-                artifacts: 'trivy-image.log',
-                allowEmptyArchive: true,
-                fingerprint: true
+                artifacts:'trivy-image.log',
+                allowEmptyArchive:true,
+                fingerprint:true
             )
         }
     }
@@ -50,9 +50,9 @@ def trivyScanFile(
             '''
         } finally {
             archiveArtifacts(
-                artifacts: 'trivy-config.log',
-                allowEmptyArchive: true,
-                fingerprint: true
+                artifacts:'trivy-config.log',
+                allowEmptyArchive:true,
+                fingerprint:true
             )
         }
     }
@@ -75,9 +75,9 @@ def checkovScan(
             '''
         } finally {
             archiveArtifacts(
-                artifacts: 'checkov.log',
-                allowEmptyArchive: true,
-                fingerprint: true
+                artifacts:'checkov.log',
+                allowEmptyArchive:true,
+                fingerprint:true
             )
         }
     }
@@ -96,9 +96,9 @@ def semgrepScan() {
         '''
     } finally {
         archiveArtifacts(
-            artifacts: 'semgrep.log',
-            allowEmptyArchive: true,
-            fingerprint: true
+            artifacts:'semgrep.log',
+            allowEmptyArchive:true,
+            fingerprint:true
         )
     }
 }

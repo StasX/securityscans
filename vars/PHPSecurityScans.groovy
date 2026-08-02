@@ -1,4 +1,4 @@
-def PHPStanScan() {
+def phpStanScan() {
     try {
         sh '''
         #!/usr/bin/env bash
@@ -9,9 +9,9 @@ def PHPStanScan() {
         '''
     } finally {
         archiveArtifacts(
-            artifacts: 'phpstan-report.txt',
-            allowEmptyArchive: true,
-            fingerprint: true
+            artifacts:'phpstan-report.txt',
+            allowEmptyArchive:true,
+            fingerprint:true
         )
     }
 }
@@ -30,9 +30,9 @@ def semgrepScan() {
         '''
     } finally {
         archiveArtifacts(
-            artifacts: 'semgrep-report.txt',
-            allowEmptyArchive: true,
-            fingerprint: true
+            artifacts:'semgrep-report.txt',
+            allowEmptyArchive:true,
+            fingerprint:true
         )
     }
 }
