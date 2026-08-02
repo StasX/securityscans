@@ -5,4 +5,14 @@
         <Field name="__$stMC"/>
         <Bug pattern="MS_SHOULD_BE_FINAL"/>
     </Match>
+
+    <Match>
+        <Class name="~.*\$_.*_closure\d+"/>
+        <Bug pattern="SE_TRANSIENT_FIELD_NOT_RESTORED"/>
+    </Match>
+
+    <Match>
+        <Class name="~.*\$_.*_closure\d+"/>
+        <Bug pattern="SE_NO_SERIALVERSIONID"/>
+    </Match>
 </FindBugsFilter>
