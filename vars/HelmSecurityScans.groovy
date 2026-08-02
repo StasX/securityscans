@@ -1,5 +1,5 @@
 def checkovScan(
-    String path,
+    String path
 ) {
     withEnv([
         "SCAN_PATH=${path}",
