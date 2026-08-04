@@ -1,21 +1,3 @@
-def phpStanScan() {
-    try {
-        sh '''
-        #!/usr/bin/env bash
-        set -o pipefail
-
-        phpstan analyse \
-            2>&1 | tee phpstan-report.txt
-        '''
-    } finally {
-        archiveArtifacts(
-            artifacts:'phpstan-report.txt',
-            allowEmptyArchive:true,
-            fingerprint:true
-        )
-    }
-}
-
 def semgrepScan() {
     try {
         sh '''
@@ -33,6 +15,26 @@ def semgrepScan() {
             artifacts:'semgrep-report.txt',
             allowEmptyArchive:true,
             fingerprint:true
+        )
+    }
+}
+
+def composerAudit() {
+    try {
+        sh '''
+        #!/usr/bin/env bash
+        set -o pipefail
+
+        composer audit \
+            --no-interaction \
+            --format=plain \
+            2>&1 | tee composer-audit.txt
+        '''
+    } finally {
+        archiveArtifacts(
+            artifacts: 'composer-audit.txt',
+            allowEmptyArchive: true,
+            fingerprint: true
         )
     }
 }
