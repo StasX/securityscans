@@ -32,9 +32,9 @@ def composerAudit() {
         '''
     } finally {
         archiveArtifacts(
-            artifacts: 'composer-audit.txt',
-            allowEmptyArchive: true,
-            fingerprint: true
+            artifacts:'composer-audit.txt',
+            allowEmptyArchive:true,
+            fingerprint:true
         )
     }
 }
