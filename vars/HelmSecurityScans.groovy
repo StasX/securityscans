@@ -2,10 +2,7 @@ def checkovScan(
     String path
 ) {
     withEnv([
-        "SCAN_PATH=${path}",
-        "PATH_FLAG=${pathFlag}",
-        "FRAMEWORK=${framework}",
-        "VENV=${venv}"
+        "SCAN_PATH=${path}"
     ]) {
         try {
             sh '''
