@@ -9,6 +9,7 @@ def banditScan(String path = '.', String venv = '.venv') {
 
             "$VENV/bin/bandit" \
                 -r "$SCAN_PATH" \
+                --exclude "$VENV" \
                 2>&1 | tee bandit-report.txt
             '''
         } finally {
