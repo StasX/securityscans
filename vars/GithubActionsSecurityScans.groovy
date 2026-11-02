@@ -1,6 +1,8 @@
 def semgrepScan() {
     try {
         sh '''#!/usr/bin/env bash
+        set -o pipefail
+
         .venv/bin/semgrep scan \
             --config=p/github-actions \
             --metrics=off \
