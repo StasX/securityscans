@@ -34,11 +34,11 @@ def semgrepScan(String venv = '.venv') {
                 --config=p/python \
                 --metrics=off \
                 --error \
-                2>&1 | tee semgrep-report.txt
+                2>&1 | tee semgrep-python-report.txt
             '''
         } finally {
             archiveArtifacts(
-                artifacts:'semgrep-report.txt',
+                artifacts:'semgrep-python-report.txt',
                 allowEmptyArchive:true,
                 fingerprint:true
             )

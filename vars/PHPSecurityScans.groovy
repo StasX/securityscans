@@ -7,11 +7,11 @@ def semgrepScan() {
             --config=p/php \
             --metrics=on \
             --error \
-            2>&1 | tee semgrep-report.txt
+            2>&1 | tee semgrep-php-report.txt
         '''
     } finally {
         archiveArtifacts(
-            artifacts:'semgrep-report.txt',
+            artifacts:'semgrep-php-report.txt',
             allowEmptyArchive:true,
             fingerprint:true
         )
