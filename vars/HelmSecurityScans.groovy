@@ -5,8 +5,7 @@ def checkovScan(
         "SCAN_PATH=${path}"
     ]) {
         try {
-            sh '''
-            #!/usr/bin/env bash
+            sh '''#!/usr/bin/env bash
             set -o pipefail
 
             ".venv/bin/python" -m checkov.main \
@@ -33,8 +32,7 @@ def kubeScoreScan(
         "SCAN_FILE=${file}"
     ]) {
         try {
-            sh '''
-            #!/usr/bin/env bash
+            sh '''#!/usr/bin/env bash
             set -o pipefail
 
             docker run --rm \
@@ -55,8 +53,7 @@ def kubeScoreScan(
 
 def semgrepScan() {
     try {
-        sh '''
-        #!/usr/bin/env bash
+        sh '''#!/usr/bin/env bash
         set -o pipefail
 
         ".venv/bin/semgrep" scan \

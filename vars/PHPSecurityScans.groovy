@@ -1,7 +1,6 @@
 def semgrepScan() {
     try {
-        sh '''
-        #!/usr/bin/env bash
+        sh '''#!/usr/bin/env bash
         set -o pipefail
 
         "$VENV/bin/semgrep" scan \
@@ -21,8 +20,7 @@ def semgrepScan() {
 
 def composerAudit() {
     try {
-        sh '''
-        #!/usr/bin/env bash
+        sh '''#!/usr/bin/env bash
         set -o pipefail
 
         composer audit \

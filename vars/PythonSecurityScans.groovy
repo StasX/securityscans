@@ -26,8 +26,7 @@ def semgrepScan(String venv = '.venv') {
         "VENV=${venv}"
     ]) {
         try {
-            sh '''
-            #!/usr/bin/env bash
+            sh '''#!/usr/bin/env bash
             set -o pipefail
 
             "$VENV/bin/semgrep" scan \

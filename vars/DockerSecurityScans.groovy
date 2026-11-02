@@ -6,7 +6,7 @@ def trivyScanImage(
         "IMAGE=${image}:${tag}"
     ]) {
         try {
-            sh '''
+            sh '''#!/usr/bin/env bash
             set -o pipefail
 
             docker run --rm \
@@ -36,7 +36,7 @@ def trivyScanFile(
         "SCAN_FILE=${file}"
     ]) {
         try {
-            sh '''
+            sh '''#!/usr/bin/env bash
             set -o pipefail
 
             docker run --rm \
@@ -65,7 +65,7 @@ def checkovScan(
         "SCAN_PATH=${path}"
     ]) {
         try {
-            sh '''
+            sh '''#!/usr/bin/env bash
             set -o pipefail
 
             .venv/bin/python -m checkov.main \
@@ -85,7 +85,7 @@ def checkovScan(
 
 def semgrepScan() {
     try {
-        sh '''
+        sh '''#!/usr/bin/env bash
         set -o pipefail
 
         .venv/bin/semgrep scan \

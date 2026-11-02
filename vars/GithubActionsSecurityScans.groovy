@@ -1,6 +1,6 @@
 def semgrepScan() {
     try {
-        sh '''
+        sh '''#!/usr/bin/env bash
         .venv/bin/semgrep scan \
             --config=p/github-actions \
             --metrics=off \
